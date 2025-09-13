@@ -23,8 +23,7 @@ jobs:
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          # --- BARIS DI BAWAH INI TELAH DIPADAM ---
-          # firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT }}' 
+          # Baris yang menyebabkan ralat telah dipadam dari sini
           channelId: live
           projectId: sistem-cuti-gantian 
         env:
