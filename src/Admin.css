@@ -1,0 +1,63 @@
+/* src/Admin.css */
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.user-table th, .user-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+.user-table th {
+  background-color: #3f51b5;
+  color: white;
+}
+.user-table tr:nth-of-type(even) {
+  background-color: #f2f2f2;
+}
+.user-table tr:hover {
+  background-color: #ddd;
+}
+.status-approved {
+  color: green;
+  font-weight: bold;
+}
+.status-pending {
+  color: #b71c1c;
+  font-weight: bold;
+}
+.approve-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.approve-button:hover {
+  background-color: #45a049;
+}
+
+/* --- PERUBAHAN DI SINI --- */
+.logout-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 250%; /* Jadikan bulat */
+  width: 100px;  /* Tetapkan lebar */
+  height: 100px; /* Tetapkan tinggi */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+.logout-button:hover {
+  background-color: #d32f2f;
+}
+.logout-button svg {
+  width: 20px;
+  height: 20px;
+}

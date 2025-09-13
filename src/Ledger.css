@@ -1,0 +1,86 @@
+/* src/Ledger.css */
+.summary-boxes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.summary-box {
+  background-color: #f0f2f5;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+}
+
+.summary-box h4 {
+  margin: 0 0 0.5rem 0;
+  color: #555;
+  font-weight: 600;
+}
+
+.summary-box p {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #3f51b5;
+}
+
+.summary-box.balance p {
+    color: #4CAF50;
+}
+
+/* --- GAYA BAHARU UNTUK JADUAL --- */
+.ledger-container {
+  overflow-x: auto; /* Membenarkan skrol jika jadual terlalu lebar */
+}
+
+.ledger-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: 0.9em;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.ledger-table thead tr {
+  background-color: #3f51b5;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.ledger-table th, .ledger-table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+.ledger-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.ledger-table tbody tr:hover {
+  background-color: #e1e4ff;
+}
+
+.ledger-table td {
+    vertical-align: top; /* Pastikan teks bermula dari atas sel */
+}
+
+.edit-button, .delete-button {
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.edit-button {
+  background-color: #0277bd;
+}
+
+.delete-button {
+  background-color: #d32f2f;
+}

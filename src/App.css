@@ -1,0 +1,36 @@
+/* src/App.css */
+body {
+  background-color: #f0f2f5;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.app-header {
+  display: flex; /* Tambah ini */
+  align-items: center; /* Tambah ini */
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+}
+.app-header h1 {
+  color: #1a237e;
+  margin: 0;
+  flex-grow: 1; /* Tambah ini */
+}
+/* --- TAMBAHAN BARU UNTUK LOGO --- */
+.app-logo {
+  width: 200px; /* Saiz logo */
+  height: auto;
+  margin-right: 15px; /* Jarak antara logo dan tajuk */
+}
+/* Kod lain tidak berubah */
