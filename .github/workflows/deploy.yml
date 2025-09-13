@@ -20,8 +20,8 @@ jobs:
         run: |
           cp firebase.json build/
 
-      # Step 3: Deploy ke Firebase Hosting (tanpa --force)
-      - uses: FirebaseExtended/action-hosting-deploy@v0
+      # Step 3: Deploy ke Firebase Hosting (GUNA v1 — kompatibel dengan CLI v14+)
+      - uses: FirebaseExtended/action-hosting-deploy@v1
         with:
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
           projectId: sistem-cuti-gantian
