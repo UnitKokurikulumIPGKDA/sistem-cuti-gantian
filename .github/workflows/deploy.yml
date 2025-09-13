@@ -9,18 +9,18 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      # 👇 Langkah 1: Install & Build React App
+      # Step 1: Install dependencies and build React app
       - name: Build React App
         run: |
           npm install
           npm run build
 
-      # 👇 Langkah 2: SALIN firebase.json KE DALAM FOLDER build/
+      # Step 2: Copy firebase.json into the build folder (required by Firebase action)
       - name: Copy firebase.json to build/
         run: |
           cp firebase.json build/
 
-      # 👇 Langkah 3: Deploy ke Firebase Hosting (sekarang firebase.json ada di build/)
+      # Step 3: Deploy to Firebase Hosting
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
