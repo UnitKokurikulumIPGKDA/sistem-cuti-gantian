@@ -27,5 +27,3 @@ jobs:
           projectId: sistem-cuti-gantian
           target: production
           entryPoint: build
-          # 👇 HAPUS force: true — kerana ia tidak wujud di Firebase CLI v14+
-          # force: true   ← JANGAN GUNA!
