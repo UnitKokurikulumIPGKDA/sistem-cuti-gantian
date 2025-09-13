@@ -9,22 +9,23 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      # Step 1: Install dependencies and build React app
+      # Step 1: Install & Build React App
       - name: Build React App
         run: |
           npm install
           npm run build
 
-      # Step 2: Copy firebase.json into the build folder (required by Firebase action)
+      # Step 2: Salin firebase.json ke dalam folder build/
       - name: Copy firebase.json to build/
         run: |
           cp firebase.json build/
 
-      # Step 3: Deploy to Firebase Hosting
+      # Step 3: Deploy ke Firebase Hosting (tanpa --force)
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
           projectId: sistem-cuti-gantian
           target: production
           entryPoint: build
-          force: true
+          # 👇 HAPUS force: true — kerana ia tidak wujud di Firebase CLI v14+
+          # force: true   ← JANGAN GUNA!
