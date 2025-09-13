@@ -9,6 +9,13 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      # 👇 LANGKAH PENTING: Build aplikasi React
+      - name: Build React App
+        run: |
+          npm install
+          npm run build
+
+      # 👇 Deploy ke Firebase Hosting
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
