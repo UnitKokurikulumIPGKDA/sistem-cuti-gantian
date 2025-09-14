@@ -20,8 +20,8 @@ jobs:
         run: |
           cp firebase.json build/
 
-      # Step 3: Deploy ke Firebase Hosting — GUNA COMMIT HASH YANG TELAH DIPERBAIKI
-      - uses: FirebaseExtended/action-hosting-deploy@5f4c8b39e7d96e2764434596880674130b58d2e8
+      # Step 3: Deploy ke Firebase Hosting — GUNA v0 (STABIL)
+      - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
           projectId: sistem-cuti-gantian
